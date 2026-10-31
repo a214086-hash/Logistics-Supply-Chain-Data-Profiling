@@ -13,12 +13,9 @@
 
 | Name | Matric Number |
 |---|---|
-| LI HUA | A214086 |
 | SONG SHIHONG | A207394 |
+| LI HUA | A214086 |
 | CHU XINRAN | A214107 |
-| LI HUA | A214086 |
-| LI HUA | A214086 |
-| LI HUA | A214086 |
 
 ## 1. Scenario
 
