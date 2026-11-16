@@ -19,7 +19,7 @@
 
 ## 1. Scenario
 
-A regional e-commerce logistics company wants to assess the quality of its order and shipment records before using them to investigate shipping delays. The dataset is suitable because it contains shipping durations, delivery statuses, geographical information, missing values, and potential privacy risks. This assessment aims to identify data quality problems and determine whether the records are sufficiently reliable for future analysis of shipping reliability across regions and shipping modes.
+A global e-commerce logistics company needs to assess the quality of its order and shipment data before analyzing delivery reliability. This dataset is suitable because it contains missing values, unusual financial records, potential data quality issues and sensitive customer information. The study investigates which fields contain missing or invalid values, whether unusual financial records should be retained, and whether regional data imbalance may affect logistics analysis.
 
 ## 2. Data Source
 
@@ -74,9 +74,7 @@ The objectives are:
 
 ### 5.1 Missing Values
 
-Missing values are identified using Pandas `isna()` and summarized using counts and percentages.
-
-Columns containing entirely missing values are removed because they provide no usable information. Remaining missing values are retained for further investigation when automatic imputation cannot be justified.
+The Product Description column is removed because all its values are missing. Other fields containing missing values are initially retained for profiling and later removed during PII minimization because they are not required for the selected logistics analysis. No missing values are imputed, and the final cleaned dataset contains no missing values.
 
 ### 5.2 Outlier Detection
 
@@ -102,7 +100,7 @@ The Jupyter Notebook includes four diagnostic visualizations:
 
 1. Missing Values by Column
 2. Outlier Detection: Benefit per Order
-3. Shipping Mode Distribution
+3. Records Flagged for Quality Review
 4. Top 10 Order Regions by Record Count
 
 These charts help identify missing data, unusual numerical values, and potential group imbalance.
